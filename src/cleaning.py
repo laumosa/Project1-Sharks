@@ -99,7 +99,7 @@ def cleaning_question_2 (df):
     df = df[df["fatal_(y/n)"] != "UNKNOWN"]
     df = df[df["fatal_(y/n)"] != "M"]
     df = df[df["fatal_(y/n)"] != "2017"]
-        # 3.3 Updates the "fatal_(y/n)" column by replacing "Y" with "Yes" and "N" with "No".
+        # 3.3 Update the "fatal_(y/n)" column by replacing "Y" with "Yes" and "N" with "No".
     df["fatal_(y/n)"] = df["fatal_(y/n)"].str.replace("Y", "Yes")
     df["fatal_(y/n)"] = df["fatal_(y/n)"].str.replace("N", "No")
 

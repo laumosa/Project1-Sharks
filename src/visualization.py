@@ -50,17 +50,16 @@ def visualizing_question_2_a (df):
     # 1.Create histplot
     
     colors = ['#E69F00', '#56B4E9'] 
-    graph = sns.histplot(data=df, x="age", hue="fatal_(y/n)", multiple="stack",  palette=colors)
-    graph.set_facecolor('#F0F0F0')
+    ax = sns.histplot(data=df, x="age", hue="fatal_(y/n)", multiple="stack",  palette=colors)
+    ax.set_facecolor('#F0F0F0')
 
     plt.xlabel("Age")
     plt.ylabel("Count of shark attacks")
     plt.legend(labels = ["YES fatal attack", "NOT fatal attack"], loc = 'upper right')
     plt.title("Age distribution by shark attack type", fontsize= 16)
     
-    graph.margins(x=0)  
-
-    graph.axvline(x=df.age.mean(), c="red", label = "Mean")
+    ax.margins(x=0)  
+    ax.axvline(x=df.age.mean(), c="red", label = "Mean")
 
     plt.savefig("figures/graph_2.png")
     plt.show()
