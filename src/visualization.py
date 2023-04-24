@@ -72,7 +72,12 @@ def visualizing_question_2_a (df):
 def visualizing_question_2_b (df):
  
     # 1. Create boxplot
-    graph = sns.boxplot(data=df, x="fatal_(y/n)", y="age", hue="fatal_(y/n)")
+    
+    colors = ['#E69F00', '#56B4E9'] 
+    ax = sns.boxplot(data=df, x="fatal_(y/n)", y="age", hue="fatal_(y/n)", palette = colors, dodge=False, width=0.5)
+    ax.set_facecolor('#F0F0F0')
+
+
     plt.gca().get_legend().remove()
     plt.xlabel("Fatal attack")
     plt.ylabel("Age")
