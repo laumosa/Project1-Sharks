@@ -88,10 +88,19 @@ def visualizing_question_2_b (df):
 def visualizing_question_3 (df):
 
     # 1.Create lineplot
-    graf_4 = df.groupby(['year'])['year'].count().plot.line().get_figure()
+    count_by_year = df.groupby(['year'])['year'].count()
+    fig, ax = plt.subplots()
+    count_by_year.plot.line(ax=ax)
+    plt.xlabel('Year', fontsize=14)
+    plt.ylabel('Count of shark attacks', fontsize=14)
+    plt.title('Count of shark attacks by year', fontsize=16)
+
     plt.axvline(x=1975, c="red", label = "jaws")
-    plt.legend()
-    plt.title("Count of shark attacks by year", fontsize= 16)
+
+    ax.set_facecolor('#F0F0F0')
+
+    ax.margins(x=0)
+
     plt.savefig("figures/graph_4.png")
     plt.show()
 
