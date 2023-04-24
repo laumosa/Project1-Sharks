@@ -73,9 +73,31 @@ Variables involved:
 **Plot results**
 ![graph_2](figures/graph_2.png)
 
-## Conclusions - HYPOTHESIS 2
-Although both swimmers and surfers have been attacked by sharks almost in the same proportion, swimmmers have been more fataly attacked by sharks than surfers meaning that have suffered from more serious injuries.
+![graph_3](figures/graph_3.png)
 
- 
+## Conclusions - HYPOTHESIS 2
+Most people who have been attacked by a shark is between 12 and 27 years old, meaning that more young people have been attacked by a shark than old people. The mean of the age of the people that has been attacked by a shark is set to 27 years approximately. Regarding to the shark attack type it follows a similar pattern for both kinds of attack (fatal and not fatal). Eventhough the differente of shark attacks between young and old people is more remarkable for not fatal attacks than fatal attacks. 
+As we can see in the boxplot the distribution of the age behaves similar for both attack types. Both distributions have atypical values above 60 years approximately. The only difference, although not significant, is that the width of the box for fatal shark attaks is smaller than the not fatal shark attacks meaning that most of the victims that suffered from a fatal shark attack belong to a lower range of age than the rest of the victims. 
+
+ ## Cleaning data - HYPOTHESIS 3
+```
+Variables involved:
+- "year": year of the shark attack
+```
+**General cleaning:**
+- Drop null values
+- Cast values into string, so it is possible to run string methods
+
+**"year" cleaning:**
+- Filter the "year" column into include only rows where the values start with "1" or "2".
+- Convert the "year" column to numeric type
+- Remove rows whose year is previous to 1800 since the number of sharck attacks is not significant
+
+**Plot results**
+![graph_4](figures/graph_4.png)
+
+## Conclusions - HYPOTHESIS 3
+The previous years from the release date there was a decrease in the shark attaks, meanwhile from the release date on we observe that the number of the shark attacks has increase and has not stopped increasing until the last year with records. Maybe the number of recordings has increased over time as there is more technology available.  
+
 
  
