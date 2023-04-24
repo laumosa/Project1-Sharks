@@ -2,12 +2,7 @@ import pandas as pd
 
 
 
-
 def basic_cleaning_1 (df):
-    """
-    This function drops missing values and duplicates rows; 
-    and sets each column name to lowercase and strips whitespaces from left and right.
-    """
     
     # 1. Modify the dataframe
         # 1.1 Lowercase and remove leading and trailing whitespaces:
@@ -20,11 +15,9 @@ def basic_cleaning_1 (df):
     return df
 
 
+
 def basic_cleaning_2 (df):
-    """
-    This function drops the selected columns useless for the analysis.
-    """
-    
+       
     # 1. Modify the dataframe
         # 1.1 Drop selected columns useless for the analysis:
     df.drop(columns=["case_number", "investigator_or_source", "pdf", "href_formula", "href", "case_number.1", "case_number.2", "original_order", "unnamed:_22", "unnamed:_23"], axis = 1, inplace = True)
@@ -32,11 +25,9 @@ def basic_cleaning_2 (df):
     return df
 
 
+
 def cleaning_question_1 (df):
-    """
-    This function drops: 
-    """
-    
+       
     # 1. Modify the dataframe:
         # 1.1 Drop null values:
     df = df[["activity", "fatal_(y/n)"]].dropna(how="all")    
@@ -62,10 +53,7 @@ def cleaning_question_1 (df):
 
 
 def cleaning_question_2 (df):
-    """
-    This function drops: 
-    """
-    
+       
     # 1. Modify the dataframe:
         # 1.1 Drop null values:
     df = df[["age", "fatal_(y/n)"]].dropna(how="any")
@@ -119,12 +107,8 @@ def cleaning_question_2 (df):
 
 
 
-
 def cleaning_question_3 (df):
-    """
-    This function drops: 
-    """
-    
+      
     # 1. Modify the dataframe:
         # 1.1 Drop null values:
     df = df[["year"]].dropna(how="all")        
